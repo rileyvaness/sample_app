@@ -62,4 +62,8 @@ Rails.application.configure do
   
     # Allow connections to local server.
   config.hosts.clear
+
+config.action_mailer.raise_delivery_errors = false
+host = '<hex string>.vfs.cloud9.us-east-2.amazonaws.com'     # Cloud IDE
+config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end
